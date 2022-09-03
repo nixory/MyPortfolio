@@ -5,11 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nixory - portfolio</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Graduate&family=Raleway:wght@200;300;400;500;600;700&family=Red+Hat+Display:wght@300&display=swap"
       rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="./css/style.min.css" />
   </head>
@@ -113,24 +118,40 @@
       <div class="container">
         <div class="wrapper">
           <h4 class="howcanihelp-title title">Чем я полезен</h4>
-      <div class="howcanihelp-wrapper">
-        <div class="howcanihelp-desc">
-          Я разрабатываю landing page сайты, сайты визитки. Могу помочь вам
-          доработать, подкорректировать ваш сайт, сделать адаптивный вёрстку
-          сайта, чтобы сайт одинаково работал на всех устройствах, умею
-          оптимизировать сайты. К сожалению интернет магазины или сложные проекты
-          делать еще пока не умею. В любом случае, если у вас есть идея, задача,
-          проблема, либо вам нужно просто сделать сайт - напишите мне, я
-          постораюсь вам помочь!
-        </div>
-        <div class="howcanihelp-img">
-          <img src="img/Code typing-bro 1.svg" alt="">
-        </div>
-      </div>
+          <div class="howcanihelp-wrapper">
+            <div class="howcanihelp-desc">
+              Я разрабатываю landing page сайты, сайты визитки. Могу помочь вам
+              доработать, подкорректировать ваш сайт, сделать адаптивный вёрстку
+              сайта, чтобы сайт одинаково работал на всех устройствах, умею
+              оптимизировать сайты. К сожалению интернет магазины или сложные
+              проекты делать еще пока не умею. В любом случае, если у вас есть
+              идея, задача, проблема, либо вам нужно просто сделать сайт -
+              напишите мне, я постораюсь вам помочь!
+            </div>
+            <div class="howcanihelp-img">
+              <img src="img/Code typing-bro 1.svg" alt="" />
+            </div>
+          </div>
         </div>
       </div>
     </section>
+    <section class="portfolio">
+      <div class="container">
+        <h4 class="portfolio-title title">Портфолио</h4>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="img/Code typing-bro 1.svg" alt="" class="portfolio-img">
+              <button class="portfolio-btn btn"><a href="#">Подробнее</a></button></div>
+              <div class="swiper-slide"><img src="img/Code typing-bro 1.svg" alt="" class="portfolio-img">
+                <button class="portfolio-btn btn"><a href="#">Подробнее</a></button></div>
+          
+        </div>
+        <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+      </div>
+    </section>
   </body>
-
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script src="./js/scripts.min.js"></script>
 </html>
