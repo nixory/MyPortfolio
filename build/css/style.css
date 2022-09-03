@@ -365,6 +365,22 @@ body.locked {
   }
 }
 
+@media only screen and (max-width: 1154px) {
+  .howcanihelp-title {
+    margin-bottom: 30px;
+  }
+
+  .howcanihelp-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 @media only screen and (max-width: 1027px) {
   .welcome-img img {
     position: absolute;
@@ -466,10 +482,51 @@ body.locked {
     margin-bottom: 30px;
     margin-right: 0;
   }
+
+  .title {
+    text-align: center;
+  }
+
+  .howcanihelp-desc {
+    margin-right: 0;
+  }
+
+  .howcanihelp-wrapper {
+    text-align: center;
+  }
+
+  .howcanihelp-img img {
+    width: 90%;
+  }
+
+  .wrapper {
+    padding: 0;
+  }
 }
 
 @media (max-width: 479.98px) {
   .container {
     max-width: none;
+  }
+}
+
+@media (max-width: 412px) {
+  .welcome-text__hi {
+    font-size: 33px;
+    line-height: 23px;
+  }
+
+  .welcome-text__name {
+    font-size: 30px;
+    line-height: 37px;
+  }
+
+  .welcome-text__who {
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  .welcome-text__forwhosite {
+    font-size: 12px;
   }
 }
