@@ -360,16 +360,17 @@ body.locked {
 }
 
 .swiper {
-  width: 946px;
+  width: 869px;
   height: 100%;
 }
 
 .swiper-slide {
+  position: relative;
   text-align: center;
   font-size: 18px;
   background: #fff;
-  width: 317px;
-  height: 216px;
+  width: 100%;
+  height: 100%;
   /* Center slide text vertically */
   display: -webkit-box;
   display: -ms-flexbox;
@@ -390,23 +391,95 @@ body.locked {
      object-fit: cover;
 }
 
+.swiper-slide:hover .portfolio-img__bgc {
+  background-color: rgba(0, 0, 0, 0);
+  -webkit-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+
+.portfolio {
+  padding-bottom: 70px;
+  text-align: center;
+}
+
+.portfolio-title {
+  margin-bottom: 95px;
+}
+
+.portfolio-wrapper {
+  position: relative;
+  width: 1004px;
+  margin: 0 auto;
+}
+
 .portfolio-img {
+  z-index: 19;
+  width: 416px;
+  height: 100%;
+}
+
+.portfolio-img__bgc {
   position: absolute;
+  width: 416px;
+  height: 234px;
+  background-color: rgba(0, 0, 0, 0.65);
+  z-index: 20;
 }
 
 .portfolio-btn {
   z-index: 20;
+  position: absolute;
+  bottom: 19px;
+  background: #002876;
+  -webkit-box-shadow: 0px 0px 21px 9px rgba(0, 40, 118, 0.47);
+          box-shadow: 0px 0px 21px 9px rgba(0, 40, 118, 0.47);
+  border-radius: 26.5px;
+  padding: 17px 41px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
 }
 
-.portfolio-btn::after {
-  content: " ";
+.portfolio-btn:hover {
+  bottom: 24px;
+  -webkit-transition: bottom 0.3s;
+  -o-transition: bottom 0.3s;
+  transition: bottom 0.3s;
+}
+
+.portfolio-next {
+  background-image: url("../img/icons/akar-icons_arrow-left (1).svg");
+  background-repeat: no-repeat;
+  width: 41px;
+  height: 40px;
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  z-index: 19;
+  left: auto;
+  right: 9px;
+  top: 45%;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.portfolio-prev {
+  background-image: url("../img/icons/akar-icons_arrow-left.svg");
+  background-repeat: no-repeat;
+  width: 41px;
+  height: 40px;
+  position: absolute;
+  left: 9px;
+  right: auto;
+  top: 45%;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.swiper-pagination {
+  bottom: -31px;
+}
+
+.swiper-pagination-bullet-active {
+  background: #002876;
 }
 
 @media (max-width: 1449.98px) {

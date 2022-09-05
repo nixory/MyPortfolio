@@ -138,18 +138,21 @@
     <section class="portfolio">
       <div class="container">
         <h4 class="portfolio-title title">Портфолио</h4>
-        <div class="swiper mySwiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="img/Code typing-bro 1.svg" alt="" class="portfolio-img">
-              <button class="portfolio-btn btn"><a href="#">Подробнее</a></button></div>
-              <div class="swiper-slide"><img src="img/Code typing-bro 1.svg" alt="" class="portfolio-img">
+        <div class="portfolio-wrapper">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><div class="portfolio-img__bgc" id="bg1"></div><img src="img/Rectangle 1firstwoprk.png" alt="" class="portfolio-img">
+                <button class="portfolio-btn btn" id="btn1"><a href="#">Подробнее</a></button></div>
+                <div class="swiper-slide"><div class="portfolio-img__bgc"></div><img src="img/Rectangle 2secondwork.png" alt="" class="portfolio-img">
                 <button class="portfolio-btn btn"><a href="#">Подробнее</a></button></div>
+            
+          </div>
           
         </div>
-        <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-pagination"></div>
-      </div>
+        <div class="portfolio-next"></div>
+            <div class="portfolio-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
     </section>
   </body>
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>

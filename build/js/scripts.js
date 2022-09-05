@@ -1,4 +1,6 @@
 // Custom Scripts
+const windowInnerWidth = window.innerWidth;
+
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 2,
   spaceBetween: 20,
@@ -10,8 +12,9 @@ var swiper = new Swiper(".mySwiper", {
     clickable: true,
   },
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".portfolio-next",
+    prevEl: ".portfolio-prev",
   },
 });
+
 
