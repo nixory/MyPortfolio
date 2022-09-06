@@ -398,6 +398,14 @@ body.locked {
   transition: background-color 0.3s;
 }
 
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: -31px;
+}
+
+.swiper-pagination-bullet-active {
+  background: #002876;
+}
+
 .portfolio {
   padding-bottom: 70px;
   text-align: center;
@@ -461,6 +469,11 @@ body.locked {
   z-index: 10;
 }
 
+.portfolio-next:hover {
+  -webkit-filter: brightness(90%);
+          filter: brightness(90%);
+}
+
 .portfolio-prev {
   background-image: url("../img/icons/akar-icons_arrow-left.svg");
   background-repeat: no-repeat;
@@ -474,12 +487,13 @@ body.locked {
   z-index: 10;
 }
 
-.swiper-pagination {
-  bottom: -31px;
+.portfolio-prev:hover {
+  -webkit-filter: brightness(90%);
+          filter: brightness(90%);
 }
 
-.swiper-pagination-bullet-active {
-  background: #002876;
+.hideswiper {
+  display: none;
 }
 
 @media (max-width: 1449.98px) {
@@ -501,6 +515,24 @@ body.locked {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 1054px) {
+  .hideswiper {
+    display: block;
+  }
+
+  .portfolioswiper {
+    display: none;
+  }
+
+  .swiper {
+    width: 453px;
+  }
+
+  .portfolio-wrapper {
+    width: 607px;
   }
 }
 
@@ -624,6 +656,57 @@ body.locked {
 
   .wrapper {
     padding: 0;
+  }
+}
+
+@media (max-width: 634px) {
+  .swiper {
+    width: 453px;
+  }
+
+  .portfolio-wrapper {
+    width: 481px;
+  }
+
+  .portfolio-next {
+    right: 45px;
+  }
+
+  .portfolio-prev {
+    left: 45px;
+  }
+}
+
+@media (max-width: 500px) {
+  .swiper {
+    width: 100%;
+  }
+
+  .portfolio-wrapper {
+    width: 100%;
+  }
+
+  .portfolio-next {
+    right: 10px;
+  }
+
+  .portfolio-prev {
+    left: 10px;
+  }
+
+  .portfolio-img {
+    width: 100%;
+  }
+
+  .portfolio-img__bgc {
+    width: 100%;
+    height: 100%;
+  }
+
+  .portfolio-btn {
+    padding: 13px 29px;
+    font-weight: 700;
+    font-size: 14px;
   }
 }
 

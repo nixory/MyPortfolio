@@ -17,4 +17,16 @@ var swiper = new Swiper(".mySwiper", {
   },
 });
 
+var swiper = new Swiper(".hideswiper", {
+  slidesPerView: 1,
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+  },
+  navigation: {
+    nextEl: ".portfolio-next",
+    prevEl: ".portfolio-prev",
+  },
+});
+
 
