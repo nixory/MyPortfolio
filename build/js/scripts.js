@@ -1,6 +1,4 @@
 // Custom Scripts
-const windowInnerWidth = window.innerWidth;
-
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 2,
   spaceBetween: 20,
@@ -29,4 +27,11 @@ var swiper = new Swiper(".hideswiper", {
   },
 });
 
-
+$('#work1').hide();
+$(".portfolio-btn").click(function() {
+  $(".portfolio-btn").toggleClass("modals-aktiv"),
+	  $('#work1').show()
+});
+$("#exit").click(function() {
+	$('#work1').hide();
+});
