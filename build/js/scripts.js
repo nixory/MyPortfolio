@@ -39,3 +39,25 @@ $("#exit").click(function() {
 $("#exit2").click(function() {
 	$('#work2').hide();
 });
+
+
+const screenWidth = window.screen.width;
+
+if (screenWidth <= 810) {
+  
+  $('#logo').click(function() {
+    // $('.header-wrapper ul').removeClass("header-nav");
+    $('#modalexit').addClass('activeicon');
+    $('.header-wrapper ul').toggleClass('active');
+    
+  });
+}
+else{
+  console.log('33')
+}
+
+$("#modalexit").click(function() {
+	$('.header-wrapper ul').toggleClass('active');
+  $('#modalexit').removeClass('activeicon');
+});
+

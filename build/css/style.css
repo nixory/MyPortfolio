@@ -202,6 +202,18 @@ body.locked {
   text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.26);
 }
 
+.header-nav__active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: -0.005em;
+}
+
 .header-links {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -218,6 +230,10 @@ body.locked {
 
 .header-links a:first-child {
   margin-left: 0;
+}
+
+#modalexit {
+  display: none;
 }
 
 .welcome {
@@ -951,8 +967,45 @@ body.locked {
 }
 
 @media only screen and (max-width: 810px) {
+  .active {
+    display: block !important;
+    position: fixed;
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 100;
+    padding-top: 100px;
+    text-align: center;
+    line-height: 55px;
+    font-size: 24px;
+    color: #002876;
+  }
+
+  .activeicon {
+    display: block !important;
+    z-index: 101;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+
   .header-nav {
     display: none;
+  }
+
+  .header-logo__hidetext {
+    display: block;
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 23px;
+    letter-spacing: -0.005em;
+    opacity: 0.8;
   }
 
   .welcome-wrapper {
@@ -980,17 +1033,6 @@ body.locked {
 @media (max-width: 767.98px) {
   .container {
     max-width: 740px;
-  }
-
-  .header-logo__hidetext {
-    display: block;
-    font-family: "Raleway";
-    font-style: normal;
-    font-weight: 300;
-    font-size: 10px;
-    line-height: 23px;
-    letter-spacing: -0.005em;
-    opacity: 0.8;
   }
 
   .skills-wrapper {
