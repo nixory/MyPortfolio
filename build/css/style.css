@@ -428,6 +428,14 @@ body.locked {
   height: 100%;
 }
 
+.portfolio-img__bgc {
+  position: absolute;
+  width: 416px;
+  height: 234px;
+  background-color: rgba(0, 0, 0, 0.65);
+  z-index: 20;
+}
+
 .portfolio-btn {
   z-index: 20;
   position: absolute;
@@ -440,6 +448,7 @@ body.locked {
   font-weight: 700;
   font-size: 16px;
   line-height: 19px;
+  color: #fff;
 }
 
 .portfolio-btn:hover {
@@ -487,7 +496,7 @@ body.locked {
 
 .portfolio-work1 {
   position: absolute;
-  padding-top: 257px;
+  padding-top: 157px;
   padding-bottom: 138px;
   padding-left: 150px;
   padding-right: 140px;
@@ -547,6 +556,11 @@ body.locked {
   padding: 21px 26px;
 }
 
+.portfolio-work1__btn:hover {
+  -webkit-box-shadow: rgba(255, 255, 255, 0.24) 0px 1px 21px 1px;
+          box-shadow: rgba(255, 255, 255, 0.24) 0px 1px 21px 1px;
+}
+
 .portfolio-work1__title {
   font-weight: 700;
   font-size: 24px;
@@ -554,6 +568,10 @@ body.locked {
   letter-spacing: -0.055em;
   margin-top: 18px;
   margin-left: 46px;
+}
+
+.portfolio-work1__title-o {
+  margin-left: 0;
 }
 
 .portfolio-work1__text {
@@ -604,14 +622,31 @@ body.locked {
 
 #exit {
   position: absolute;
-  right: 50px;
-  top: 20px;
-  width: 40px;
+  right: 61px;
+  top: 49px;
+  width: 50px;
+  cursor: pointer;
+}
+
+#exit2 {
+  position: absolute;
+  right: 61px;
+  top: 49px;
+  width: 50px;
+  cursor: pointer;
 }
 
 @media (max-width: 1449.98px) {
   .container {
     max-width: 1200px;
+  }
+}
+
+@media only screen and (max-width: 1206px) {
+  .portfolio-work1 {
+    width: 100%;
+    right: 0;
+    padding-right: 45px;
   }
 }
 
@@ -646,6 +681,37 @@ body.locked {
 
   .portfolio-wrapper {
     width: 607px;
+  }
+
+  .portfolio-work1__img {
+    width: 544px;
+    height: 301px;
+  }
+
+  .portfolio-work1__hours {
+    margin-left: 9px;
+    font-size: 19px;
+  }
+
+  .portfolio-work1__btn {
+    padding: 13px 26px;
+  }
+
+  .portfolio-work1__title {
+    font-size: 22px;
+    margin-left: 0;
+  }
+
+  .portfolio-work1__task {
+    font-size: 20px;
+  }
+
+  .portfolio-work1__decision {
+    font-size: 20px;
+  }
+
+  .portfolio-work1__taskadv {
+    font-size: 15px;
   }
 }
 
@@ -692,6 +758,23 @@ body.locked {
 @media (max-width: 991.98px) {
   .container {
     max-width: 970px;
+  }
+}
+
+@media only screen and (max-width: 944px) {
+  .portfolio-work1__img {
+    width: 468px;
+  }
+}
+
+@media only screen and (max-width: 852px) {
+  .portfolio-work1 {
+    padding-left: 87px;
+  }
+
+  .portfolio-work1__btn {
+    padding: 13px 11px;
+    font-size: 13px;
   }
 }
 
@@ -772,6 +855,86 @@ body.locked {
   }
 }
 
+@media only screen and (max-width: 744px) {
+  .portfolio-work1 {
+    padding-top: 115px;
+  }
+
+  .portfolio-work1__img {
+    width: 397px;
+    height: 236px;
+  }
+
+  .portfolio-work1__hours {
+    margin-left: 2px;
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 660px) {
+  .portfolio-work1 {
+    padding-left: 50px;
+  }
+
+  .portfolio-work1__desc {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .portfolio-work1__hours {
+    -webkit-writing-mode: unset;
+        -ms-writing-mode: unset;
+            writing-mode: unset;
+  }
+
+  .portfolio-work1__btn {
+    margin-top: 20px;
+    margin-left: 0;
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
+
+  .portfolio-work1__title {
+    text-align: center;
+  }
+
+  .portfolio-work1__tasks {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .portfolio-work1__task {
+    margin-right: 0;
+  }
+
+  .portfolio-work1__decisions {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .portfolio-work1__decision {
+    margin-right: 0;
+  }
+
+  #exit {
+    right: 38px;
+    top: 40px;
+    width: 41px;
+  }
+
+  #exit2 {
+    right: 38px;
+    top: 40px;
+    width: 41px;
+  }
+}
+
 @media (max-width: 634px) {
   .swiper {
     width: 453px;
@@ -821,6 +984,10 @@ body.locked {
     font-weight: 700;
     font-size: 14px;
   }
+
+  .portfolio-work1__img {
+    width: 360px;
+  }
 }
 
 @media (max-width: 479.98px) {
@@ -847,5 +1014,15 @@ body.locked {
 
   .welcome-text__forwhosite {
     font-size: 12px;
+  }
+
+  .portfolio-work1 {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .portfolio-work1__img {
+    width: 100%;
+    height: 100%;
   }
 }

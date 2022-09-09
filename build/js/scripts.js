@@ -3,7 +3,6 @@ var swiper = new Swiper(".mySwiper", {
   slidesPerView: 2,
   spaceBetween: 20,
   slidesPerGroup: 1,
-  loop: true,
   loopFillGroupWithBlank: true,
   pagination: {
     el: ".swiper-pagination",
@@ -27,11 +26,16 @@ var swiper = new Swiper(".hideswiper", {
   },
 });
 
-$('#work1').hide();
-$(".portfolio-btn").click(function() {
-  $(".portfolio-btn").toggleClass("modals-aktiv"),
-	  $('#work1').show()
+$('#work1, #work2').hide();
+$(".portfolio-btn__1").click(function() {
+	$('#work1').show();
+});
+$(".portfolio-btn__2").click(function() {
+	$('#work2').show();
 });
 $("#exit").click(function() {
 	$('#work1').hide();
+});
+$("#exit2").click(function() {
+	$('#work2').hide();
 });
