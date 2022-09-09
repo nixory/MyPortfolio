@@ -779,6 +779,8 @@ body.locked {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .contacts__title {
@@ -790,7 +792,8 @@ body.locked {
 }
 
 .contacts__item {
-  margin-right: 30px;
+  padding-right: 25px;
+  margin-bottom: 20px;
 }
 
 @media (max-width: 1449.98px) {
@@ -1197,6 +1200,10 @@ body.locked {
   .contactme__title {
     font-weight: 700;
     font-size: 32px;
+  }
+
+  .contacts__item {
+    padding-right: 18px;
   }
 }
 
