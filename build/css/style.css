@@ -407,7 +407,7 @@ body.locked {
 }
 
 .portfolio {
-  padding-bottom: 70px;
+  padding-bottom: 100px;
   text-align: center;
   position: relative;
 }
@@ -636,6 +636,63 @@ body.locked {
   cursor: pointer;
 }
 
+.aboutme {
+  background-color: #000A16;
+  padding-top: 86px;
+  padding-bottom: 106px;
+  color: #fff;
+  font-family: "Raleway";
+}
+
+.aboutme__title {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 65px;
+}
+
+.aboutme__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-right: 97px;
+  padding-left: 97px;
+}
+
+.aboutme__whoami {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 33px;
+  margin-bottom: 70px;
+}
+
+.aboutme__articul {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 23px;
+  margin-right: 20px;
+}
+
+.aboutme__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 31px;
+}
+
+.aboutme__info:last-child {
+  margin-bottom: 0;
+}
+
+.aboutme__infoo {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 23px;
+}
+
+.aboutme__text {
+  padding-right: 10px;
+}
+
 @media (max-width: 1449.98px) {
   .container {
     max-width: 1200px;
@@ -759,6 +816,18 @@ body.locked {
   .container {
     max-width: 970px;
   }
+
+  .aboutme__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .aboutme__photo {
+    margin: 0 auto;
+    margin-top: 60px;
+  }
 }
 
 @media only screen and (max-width: 944px) {
@@ -852,6 +921,24 @@ body.locked {
 
   .wrapper {
     padding: 0;
+  }
+
+  .aboutme__wrapper {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .aboutme__photo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .aboutme__myphoto {
+    width: 75%;
   }
 }
 
@@ -993,6 +1080,13 @@ body.locked {
 @media (max-width: 479.98px) {
   .container {
     max-width: none;
+  }
+
+  .aboutme__info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
