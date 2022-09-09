@@ -55,8 +55,17 @@ if (screenWidth <= 810) {
 else{
   console.log('33')
 }
+if (screenWidth > 810) {
+  
+  $('#modalexit').removeClass('activeicon');
+  $('.header-wrapper ul').removeClass('active');
 
-$("#modalexit").click(function() {
+}
+else{
+  console.log('34')
+}
+
+$("#modalexit, #howcanihelpbtn, #portfoliobtn, #aboutmebtn, #contactsbtn").click(function() {
 	$('.header-wrapper ul').toggleClass('active');
   $('#modalexit').removeClass('activeicon');
 });
