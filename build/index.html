@@ -1,287 +1,440 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-	<meta charset="UTF-8">
-	<meta content="IE=edge" http-equiv="X-UA-Compatible">
-	<meta content="width=device-width, initial-scale=1.0" name="viewport">
-	<title>Nixory - portfolio</title>
-	<link href="https://fonts.googleapis.com" rel="preconnect">
-	<link href="https://fonts.gstatic.com" rel="preconnect">
-	<link href="https://fonts.googleapis.com/css2?family=Graduate&family=Raleway:wght@200;300;400;500;600;700&family=Red+Hat+Display:wght@300&display=swap" rel="stylesheet">
-	<link href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" rel="stylesheet">
-	<link href="./css/style.css" rel="stylesheet">
-</head>
-<body class="main__body">
-	<div class="header">
-		<div class="container">
-			<div class="header-navbar">
-				<img alt="" id="modalexit" src="img/icons/exiticon.png">
-				<div class="header-logotext" id="logo">
-					<div class="header-logo">
-						Nixory
-					</div>
-					<div class="header-logo__hidetext">
-						Кликни на лого, чтобы открыть меню
-					</div>
-				</div>
-				<div class="header-wrapper">
-					<ul class="header-nav">
-						<li class="header-nav__item">
-							<a class="header-nav__item-link" href="#howcanihelp" id="howcanihelpbtn">Чем&nbsp;я&nbsp;полезен</a>
-						</li>
-						<li class="header-nav__item">
-							<a class="header-nav__item-link" href="#portfolio" id="portfoliobtn">Моё&nbsp;портфолио</a>
-						</li>
-						<li class="header-nav__item">
-							<a class="header-nav__item-link" href="#aboutme" id="aboutmebtn">Обо&nbsp;мне</a>
-						</li>
-						<li class="header-nav__item">
-							<a class="header-nav__item-link" href="#contacts" id="contactsbtn">Контакты</a>
-						</li>
-					</ul>
-					<div class="header-links">
-						<a class="header-link" href="https://www.instagram.com/eternalxxsleep/"><img alt="instagram" class="header-link__img" src="img/icons/Vectorinstagram.svg"></a><a class="header-link" href="https://github.com/nixory"><img alt="github" class="header-link__img" src="img/icons/Vectorgithub.svg"></a><a class="header-link" href="mailto:nikitastepanovs777@gmail.com"><img alt="email" class="header-link__img" src="img/icons/Vectoremail.svg"></a> <!-- <a href="#" class="language">eng</a> -->
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<section class="welcome">
-		<div class="container">
-			<div class="welcome-wrapper">
-				<div class="welcome-text">
-					<h2 class="welcome-text__hi">Привет!</h2>
-					<h1 class="welcome-text__name">Меня зовут <span class="welcome-text__name-o">Никита</span>,</h1>
-					<h3 class="welcome-text__who"><span class="welcome-text__who-o">Я</span> - разработчик сайтов.</h3>
-					<div class="welcome-text__forwhosite">
-						Данный сайт создан специально для заказчиков
-					</div>
-					<form action="http://localhost:3001/index#contacts" method="get" style="display: inline; color: white;">
-						<button class="welcome__btn btn">Написать мне</button>
-					</form>
-				</div>
-				<div class="welcome-img"><img alt="" src="img/Programming-amico%201.svg"></div>
-			</div>
-		</div>
-	</section>
-	<section class="skills">
-		<div class="container">
-			<div class="skills-wrapper">
-				<h4 class="skills-title title">Мои умения:</h4>
-				<ul class="skills-pool">
-					<li class="skills-pool__item"><span class="skills-pool__item-o">1.</span>HTML</li>
-					<li class="skills-pool__item"><span class="skills-pool__item-o">2.</span>CSS</li>
-					<li class="skills-pool__item"><span class="skills-pool__item-o">3.</span>SASS</li>
-					<li class="skills-pool__item"><span class="skills-pool__item-o">4.</span>JavaScript</li>
-					<li class="skills-pool__item"><span class="skills-pool__item-o">5.</span>Git</li>
-				</ul>
-			</div>
-		</div>
-	</section>
-	<section class="howcanihelp" id="howcanihelp">
-		<div class="container">
-			<div class="wrapper">
-				<h4 class="howcanihelp-title title">Чем я полезен</h4>
-				<div class="howcanihelp-wrapper">
-					<div class="howcanihelp-desc">
-						Я разрабатываю landing page сайты, сайты визитки. Могу помочь вам доработать, подкорректировать ваш сайт, сделать адаптивный вёрстку сайта, чтобы сайт одинаково работал на всех устройствах, умею оптимизировать сайты. К сожалению интернет магазины или сложные проекты делать еще пока не умею. В любом случае, если у вас есть идея, задача, проблема, либо вам нужно просто сделать сайт - напишите мне, я постораюсь вам помочь!
-					</div>
-					<div class="howcanihelp-img"><img alt="" src="img/Code%20typing-bro%201.svg"></div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section class="portfolio" id="portfolio">
-		<div class="container">
-			<h4 class="portfolio-title title">Портфолио</h4>
-			<div class="portfolio-wrapper">
-				<div class="swiper mySwiper portfolioswiper">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide">
-							<div class="portfolio-img__bgc" id="bg2"></div><img alt="" class="portfolio-img" src="img/Rectangle%201firstwoprk.png"> <button class="portfolio-btn portfolio-btn__1 btn" id="btn2">Подробнее</button>
-						</div>
-						<div class="swiper-slide">
-							<div class="portfolio-img__bgc"></div><img alt="" class="portfolio-img" src="img/Rectangle%202secondwork.png"> <button class="portfolio-btn portfolio-btn__2 btn">Подробнее</button>
-						</div>
-					</div>
-				</div>
-				<div class="swiper mySwiper hideswiper">
-					<div class="swiper-wrapper hideswiper-wrapper">
-						<div class="swiper-slide hideswiper-slide">
-							<div class="portfolio-img__bgc" id="bg1"></div><img alt="" class="portfolio-img" src="img/Rectangle%201firstwoprk.png"> <button class="portfolio-btn portfolio-btn__1 btn" id="btn3">Подробнее</button>
-						</div>
-						<div class="swiper-slide hideswiper-slide">
-							<div class="portfolio-img__bgc"></div><img alt="" class="portfolio-img" src="img/Rectangle%202secondwork.png"> <button class="portfolio-btn portfolio-btn__2 btn">Подробнее</button>
-						</div>
-					</div>
-				</div>
-				<div class="portfolio-next"></div>
-				<div class="portfolio-prev"></div>
-				<div class="swiper-pagination"></div>
-			</div>
-			<div class="portfolio-work1" id="work1">
-				<img alt="" id="exit" src="img/icons/mdi_exit-to-app.svg">
-				<div class="portfolio-work1__wrapper">
-					<div class="portfolio-work1__desc">
-						<img alt="" class="portfolio-work1__img" src="img/Rectangle%202firstwork.png"> <span class="portfolio-work1__hours">Делал сайт +- 48 часов</span>
-						<form action="https://nixory.github.io/globalopt/build/" method="get" style="display: inline; align-self: flex-start;" target="_blank">
-							<button class="portfolio-work1__btn btn">Перейти на сайт</button>
-						</form>
-					</div>
-					<div class="portfolio-work1__text">
-						<div class="portfolio-work1__title">
-							Разработка сайта по логистике из Китая “Globalopt”
-						</div>
-						<div class="portfolio-work1__tasks">
-							<span class="portfolio-work1__task">Задача:</span>
-							<div class="portfolio-work1__taskadv">
-								Нужно было сверстать сайт с кривово PSD макета(он не открывался в программе Photoshop), использую технику pixel perfect (это когда сайт идентичен макету пиксель в пиксель). Так же нужно было добавить на сайт интерактив (активные модальные окна, анимации), слайдеры, а так же сделать адаптивную вёрстку(адаптация сайта под все возможные устройства).
-							</div>
-						</div>
-						<div class="portfolio-work1__decisions">
-							<span class="portfolio-work1__decision">Решение:</span>
-							<div class="portfolio-work1__taskadv">
-								Смог открыть макет в программе Avocode. Сверстал сайт по технике pixel perfect с помощью расширения в браузере Chrome. Благодоря Swiper js сделал интерактивные слайдеры на сайте. Сделал адаптацию сайта. Так же бонусом ко всему - оптимизировал сайт: сжал всю графику(кроме иконок svg формата) и изменил тип графики на webp (более современный тип графики), починил все недочёты, которые выдал Google PageSpeed Insights.
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="portfolio-work1 portfolio-work2" id="work2">
-				<img alt="" id="exit2" src="img/icons/mdi_exit-to-app.svg">
-				<div class="portfolio-work1__wrapper">
-					<div class="portfolio-work1__desc">
-						<img alt="" class="portfolio-work1__img" src="img/Rectangle%2022firstwoprk.png"> <span class="portfolio-work1__hours">Делал сайт +- 32 часа</span>
-						<form action="https://nixory.github.io/Good-cardboard/build/" method="get" style="display: inline; align-self: flex-start;" target="_blank">
-							<button class="portfolio-work1__btn btn">Перейти на сайт</button>
-						</form>
-					</div>
-					<div class="portfolio-work1__text">
-						<div class="portfolio-work1__title portfolio-work1__title-o">
-							Разработка сайта по производству упаковок “Добрый Картон”
-						</div>
-						<div class="portfolio-work1__tasks">
-							<span class="portfolio-work1__task">Задача:</span>
-							<div class="portfolio-work1__taskadv">
-								Нужно сверстать сайт с PSD макета, адаптировать, подключить две карты Google maps и настроить их, сделать слайдер с затемнением не активных картинок, оптимизировать сайт.
-							</div>
-						</div>
-						<div class="portfolio-work1__decisions">
-							<span class="portfolio-work1__decision">Решение:</span>
-							<div class="portfolio-work1__taskadv">
-								Сверстал сайт применяя технологию Pixel Perfect, добавил модальное окно, добавил две Google карты и настроил их (это был самый сложный для меня этап, так как сталкулся с этим в первые), с помощью Swiper js сделал нужные слайдеры, адаптировал сайт под все устройства, а так же правильно оптимизировал сайт.
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section class="aboutme" id="aboutme">
-		<div class="container">
-			<h4 class="aboutme__title title">Обо мне</h4>
-			<div class="aboutme__wrapper">
-				<div class="aboutme__text">
-					<div class="aboutme__whoami">
-						Front-end разработчик
-					</div>
-					<div class="aboutme__info">
-						<div class="aboutme__articul">
-							Имя, Фамилия:
-						</div>
-						<div class="aboutme__infoo">
-							Никита Степанов
-						</div>
-					</div>
-					<div class="aboutme__info">
-						<div class="aboutme__articul">
-							Возвраст:
-						</div>
-						<div class="aboutme__infoo">
-							19 лет
-						</div>
-					</div>
-					<div class="aboutme__info">
-						<div class="aboutme__articul">
-							Образование:
-						</div>
-						<div class="aboutme__infoo">
-							Среднее (12 классов), обучался в Glo Academy, в данный момент учусь в институте TSI специальность “Компьютерные науки”.
-						</div>
-					</div>
-					<div class="aboutme__info">
-						<div class="aboutme__articul">
-							Опыт:
-						</div>
-						<div class="aboutme__infoo">
-							В сфере веб программирования уже год, максимум делал свои учебные проекты.
-						</div>
-					</div>
-					<div class="aboutme__info">
-						<div class="aboutme__articul">
-							Страна проживания:
-						</div>
-						<div class="aboutme__infoo">
-							Латвия, Рига.
-						</div>
-					</div>
-					<div class="aboutme__info">
-						<div class="aboutme__articul">
-							Email:
-						</div>
-						<div class="aboutme__infoo">
-							nikitastepanovs777@gmail.com
-						</div>
-					</div>
-				</div>
-				<div class="aboutme__photo"><img alt="" class="aboutme__myphoto" src="img/myphoto.png"></div>
-			</div>
-		</div>
-	</section>
-	<div class="contactme">
-		<div class="contactme-blur">
-			<div class="container">
-				<div class="contactme__title title">
-					Связаться со мной
-				</div>
-				<form action="http://localhost:3001/index/" class="contactme__forms" method="post">
-					<input class="contactme__input" name="email" placeholder="Ваш email:" required="" type="email"> <input class="contactme__input contactme__input-o" name="text" placeholder="Ваше сообщение:" required="" type="text"> <button class="contactme__btn btn">Отправить</button>
-				</form>
-			</div>
-		</div>
-	</div>
-	<div class="contacts" id="contacts">
-		<div class="container">
-			<div class="contacts__title title">
-				Контакты
-			</div>
-			<ul class="contacts__icons">
-				<li class="contacts__item">
-					<a href="https://www.instagram.com/eternalxxsleep/" target="_blank"><img alt="" src="img/icons/instagram.svg"></a>
-				</li>
-				<li class="contacts__item">
-					<a href="https://vk.com/eternalxsleep" target="_blank"><img alt="" src="img/icons/vk.svg"></a>
-				</li>
-				<li class="contacts__item">
-					<a href="https://t.me/w8plzz" target="_blank"><img alt="" src="img/icons/telegram.svg"></a>
-				</li>
-				<li class="contacts__item">
-					<a href="https://github.com/nixory" target="_blank"><img alt="" src="img/icons/github.svg"></a>
-				</li>
-				<li class="contacts__item">
-					<a href="https://www.linkedin.com/in/nikita-stepanovs-42683a23b/" target="_blank"><img alt="" src="img/icons/linkedin.svg"></a>
-				</li>
-				<li class="contacts__item">
-					<a href="mailto:nikitastepanovs777@gmail.com"><img alt="" src="img/icons/email.svg"></a>
-				</li>
-			</ul>
-		</div>
-	</div>
-	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js">
-	</script> 
-	<script src="https://code.jquery.com/jquery-3.6.1.min.js">
-	</script> 
-	<script src="./js/scripts.min.js">
-	</script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta name="theme-color" content="white" />
+    <meta name="msapplication-navbutton-color" content="white" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+    <title>Nixory - portfolio</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Graduate&family=Raleway:wght@200;300;400;500;600;700&family=Red+Hat+Display:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+      rel="stylesheet"
+    />
+    <link href="./css/style.css" rel="stylesheet" />
+  </head>
+  <body class="main__body">
+    <div class="header">
+      <div class="container">
+        <div class="header-navbar">
+          <img alt="" id="modalexit" src="img/icons/exiticon.png" />
+          <div class="header-logotext" id="logo">
+            <div class="header-logo">Nixory</div>
+            <div class="header-logo__hidetext">
+              Кликни на лого, чтобы открыть меню
+            </div>
+          </div>
+          <div class="header-wrapper">
+            <ul class="header-nav">
+              <li class="header-nav__item">
+                <a
+                  class="header-nav__item-link"
+                  href="#howcanihelp"
+                  id="howcanihelpbtn"
+                  >Чем&nbsp;я&nbsp;полезен</a
+                >
+              </li>
+              <li class="header-nav__item">
+                <a
+                  class="header-nav__item-link"
+                  href="#portfolio"
+                  id="portfoliobtn"
+                  >Моё&nbsp;портфолио</a
+                >
+              </li>
+              <li class="header-nav__item">
+                <a class="header-nav__item-link" href="#aboutme" id="aboutmebtn"
+                  >Обо&nbsp;мне</a
+                >
+              </li>
+              <li class="header-nav__item">
+                <a
+                  class="header-nav__item-link"
+                  href="#contacts"
+                  id="contactsbtn"
+                  >Контакты</a
+                >
+              </li>
+            </ul>
+            <div class="header-links">
+              <a
+                class="header-link"
+                href="https://www.instagram.com/eternalxxsleep/"
+                ><img
+                  alt="instagram"
+                  class="header-link__img"
+                  src="img/icons/Vectorinstagram.svg" /></a
+              ><a class="header-link" href="https://github.com/nixory"
+                ><img
+                  alt="github"
+                  class="header-link__img"
+                  src="img/icons/Vectorgithub.svg" /></a
+              ><a class="header-link" href="mailto:nikitastepanovs777@gmail.com"
+                ><img
+                  alt="email"
+                  class="header-link__img"
+                  src="img/icons/Vectoremail.svg"
+              /></a>
+              <!-- <a href="#" class="language">eng</a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="welcome">
+      <div class="container">
+        <div class="welcome-wrapper">
+          <div class="welcome-text">
+            <h2 class="welcome-text__hi">Привет!</h2>
+            <h1 class="welcome-text__name">
+              Меня зовут <span class="welcome-text__name-o">Никита</span>,
+            </h1>
+            <h3 class="welcome-text__who">
+              <span class="welcome-text__who-o">Я</span> - разработчик сайтов.
+            </h3>
+            <div class="welcome-text__forwhosite">
+              Данный сайт создан специально для заказчиков
+            </div>
+            <form
+              action="http://localhost:3001/index#contacts"
+              method="get"
+              style="display: inline; color: white"
+            >
+              <button class="welcome__btn btn">Написать мне</button>
+            </form>
+          </div>
+          <div class="welcome-img">
+            <img alt="" src="img/Programming-amico%201.svg" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="skills">
+      <div class="container">
+        <div class="skills-wrapper">
+          <h4 class="skills-title title">Мои умения:</h4>
+          <ul class="skills-pool">
+            <li class="skills-pool__item">
+              <span class="skills-pool__item-o">1.</span>HTML
+            </li>
+            <li class="skills-pool__item">
+              <span class="skills-pool__item-o">2.</span>CSS
+            </li>
+            <li class="skills-pool__item">
+              <span class="skills-pool__item-o">3.</span>SASS
+            </li>
+            <li class="skills-pool__item">
+              <span class="skills-pool__item-o">4.</span>JavaScript
+            </li>
+            <li class="skills-pool__item">
+              <span class="skills-pool__item-o">5.</span>Git
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="howcanihelp" id="howcanihelp">
+      <div class="container">
+        <div class="wrapper">
+          <h4 class="howcanihelp-title title">Чем я полезен</h4>
+          <div class="howcanihelp-wrapper">
+            <div class="howcanihelp-desc">
+              Я разрабатываю landing page сайты, сайты визитки. Могу помочь вам
+              доработать, подкорректировать ваш сайт, сделать адаптивный вёрстку
+              сайта, чтобы сайт одинаково работал на всех устройствах, умею
+              оптимизировать сайты. К сожалению интернет магазины или сложные
+              проекты делать еще пока не умею. В любом случае, если у вас есть
+              идея, задача, проблема, либо вам нужно просто сделать сайт -
+              напишите мне, я постораюсь вам помочь!
+            </div>
+            <div class="howcanihelp-img">
+              <img alt="" src="img/Code%20typing-bro%201.svg" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="portfolio" id="portfolio">
+      <div class="container">
+        <h4 class="portfolio-title title">Портфолио</h4>
+        <div class="portfolio-wrapper">
+          <div class="swiper mySwiper portfolioswiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="portfolio-img__bgc" id="bg2"></div>
+                <img
+                  alt=""
+                  class="portfolio-img"
+                  src="img/Rectangle%201firstwoprk.png"
+                />
+                <button class="portfolio-btn portfolio-btn__1 btn" id="btn2">
+                  Подробнее
+                </button>
+              </div>
+              <div class="swiper-slide">
+                <div class="portfolio-img__bgc"></div>
+                <img
+                  alt=""
+                  class="portfolio-img"
+                  src="img/Rectangle%202secondwork.png"
+                />
+                <button class="portfolio-btn portfolio-btn__2 btn">
+                  Подробнее
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper mySwiper hideswiper">
+            <div class="swiper-wrapper hideswiper-wrapper">
+              <div class="swiper-slide hideswiper-slide">
+                <div class="portfolio-img__bgc" id="bg1"></div>
+                <img
+                  alt=""
+                  class="portfolio-img"
+                  src="img/Rectangle%201firstwoprk.png"
+                />
+                <button class="portfolio-btn portfolio-btn__1 btn" id="btn3">
+                  Подробнее
+                </button>
+              </div>
+              <div class="swiper-slide hideswiper-slide">
+                <div class="portfolio-img__bgc"></div>
+                <img
+                  alt=""
+                  class="portfolio-img"
+                  src="img/Rectangle%202secondwork.png"
+                />
+                <button class="portfolio-btn portfolio-btn__2 btn">
+                  Подробнее
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-next"></div>
+          <div class="portfolio-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+        <div class="portfolio-work1" id="work1">
+          <img alt="" id="exit" src="img/icons/mdi_exit-to-app.svg" />
+          <div class="portfolio-work1__wrapper">
+            <div class="portfolio-work1__desc">
+              <img
+                alt=""
+                class="portfolio-work1__img"
+                src="img/Rectangle%202firstwork.png"
+              />
+              <span class="portfolio-work1__hours">Делал сайт +- 48 часов</span>
+              <form
+                action="https://nixory.github.io/globalopt/build/"
+                method="get"
+                style="display: inline; align-self: flex-start"
+                target="_blank"
+              >
+                <button class="portfolio-work1__btn btn">
+                  Перейти на сайт
+                </button>
+              </form>
+            </div>
+            <div class="portfolio-work1__text">
+              <div class="portfolio-work1__title">
+                Разработка сайта по логистике из Китая “Globalopt”
+              </div>
+              <div class="portfolio-work1__tasks">
+                <span class="portfolio-work1__task">Задача:</span>
+                <div class="portfolio-work1__taskadv">
+                  Нужно было сверстать сайт с кривово PSD макета(он не
+                  открывался в программе Photoshop), использую технику pixel
+                  perfect (это когда сайт идентичен макету пиксель в пиксель).
+                  Так же нужно было добавить на сайт интерактив (активные
+                  модальные окна, анимации), слайдеры, а так же сделать
+                  адаптивную вёрстку(адаптация сайта под все возможные
+                  устройства).
+                </div>
+              </div>
+              <div class="portfolio-work1__decisions">
+                <span class="portfolio-work1__decision">Решение:</span>
+                <div class="portfolio-work1__taskadv">
+                  Смог открыть макет в программе Avocode. Сверстал сайт по
+                  технике pixel perfect с помощью расширения в браузере Chrome.
+                  Благодоря Swiper js сделал интерактивные слайдеры на сайте.
+                  Сделал адаптацию сайта. Так же бонусом ко всему -
+                  оптимизировал сайт: сжал всю графику(кроме иконок svg формата)
+                  и изменил тип графики на webp (более современный тип графики),
+                  починил все недочёты, которые выдал Google PageSpeed Insights.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-work1 portfolio-work2" id="work2">
+          <img alt="" id="exit2" src="img/icons/mdi_exit-to-app.svg" />
+          <div class="portfolio-work1__wrapper">
+            <div class="portfolio-work1__desc">
+              <img
+                alt=""
+                class="portfolio-work1__img"
+                src="img/Rectangle%2022firstwoprk.png"
+              />
+              <span class="portfolio-work1__hours">Делал сайт +- 32 часа</span>
+              <form
+                action="https://nixory.github.io/Good-cardboard/build/"
+                method="get"
+                style="display: inline; align-self: flex-start"
+                target="_blank"
+              >
+                <button class="portfolio-work1__btn btn">
+                  Перейти на сайт
+                </button>
+              </form>
+            </div>
+            <div class="portfolio-work1__text">
+              <div class="portfolio-work1__title portfolio-work1__title-o">
+                Разработка сайта по производству упаковок “Добрый Картон”
+              </div>
+              <div class="portfolio-work1__tasks">
+                <span class="portfolio-work1__task">Задача:</span>
+                <div class="portfolio-work1__taskadv">
+                  Нужно сверстать сайт с PSD макета, адаптировать, подключить
+                  две карты Google maps и настроить их, сделать слайдер с
+                  затемнением не активных картинок, оптимизировать сайт.
+                </div>
+              </div>
+              <div class="portfolio-work1__decisions">
+                <span class="portfolio-work1__decision">Решение:</span>
+                <div class="portfolio-work1__taskadv">
+                  Сверстал сайт применяя технологию Pixel Perfect, добавил
+                  модальное окно, добавил две Google карты и настроил их (это
+                  был самый сложный для меня этап, так как сталкулся с этим в
+                  первые), с помощью Swiper js сделал нужные слайдеры,
+                  адаптировал сайт под все устройства, а так же правильно
+                  оптимизировал сайт.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="aboutme" id="aboutme">
+      <div class="container">
+        <h4 class="aboutme__title title">Обо мне</h4>
+        <div class="aboutme__wrapper">
+          <div class="aboutme__text">
+            <div class="aboutme__whoami">Front-end разработчик</div>
+            <div class="aboutme__info">
+              <div class="aboutme__articul">Имя, Фамилия:</div>
+              <div class="aboutme__infoo">Никита Степанов</div>
+            </div>
+            <div class="aboutme__info">
+              <div class="aboutme__articul">Возвраст:</div>
+              <div class="aboutme__infoo">19 лет</div>
+            </div>
+            <div class="aboutme__info">
+              <div class="aboutme__articul">Образование:</div>
+              <div class="aboutme__infoo">
+                Среднее (12 классов), обучался в Glo Academy, в данный момент
+                учусь в институте TSI специальность “Компьютерные науки”.
+              </div>
+            </div>
+            <div class="aboutme__info">
+              <div class="aboutme__articul">Опыт:</div>
+              <div class="aboutme__infoo">
+                В сфере веб программирования уже год, максимум делал свои
+                учебные проекты.
+              </div>
+            </div>
+            <div class="aboutme__info">
+              <div class="aboutme__articul">Страна проживания:</div>
+              <div class="aboutme__infoo">Латвия, Рига.</div>
+            </div>
+            <div class="aboutme__info">
+              <div class="aboutme__articul">Email:</div>
+              <div class="aboutme__infoo">nikitastepanovs777@gmail.com</div>
+            </div>
+          </div>
+          <div class="aboutme__photo">
+            <img alt="" class="aboutme__myphoto" src="img/myphoto.png" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="contactme">
+      <div class="contactme-blur">
+        <div class="container">
+          <div class="contactme__title title">Связаться со мной</div>
+          <form
+            action="http://localhost:3001/index/"
+            class="contactme__forms"
+            method="post"
+          >
+            <input
+              class="contactme__input"
+              name="email"
+              placeholder="Ваш email:"
+              required=""
+              type="email"
+            />
+            <input
+              class="contactme__input contactme__input-o"
+              name="text"
+              placeholder="Ваше сообщение:"
+              required=""
+              type="text"
+            />
+            <button class="contactme__btn btn">Отправить</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="contacts" id="contacts">
+      <div class="container">
+        <div class="contacts__title title">Контакты</div>
+        <ul class="contacts__icons">
+          <li class="contacts__item">
+            <a href="https://www.instagram.com/eternalxxsleep/" target="_blank"
+              ><img alt="" src="img/icons/instagram.svg"
+            /></a>
+          </li>
+          <li class="contacts__item">
+            <a href="https://vk.com/eternalxsleep" target="_blank"
+              ><img alt="" src="img/icons/vk.svg"
+            /></a>
+          </li>
+          <li class="contacts__item">
+            <a href="https://t.me/w8plzz" target="_blank"
+              ><img alt="" src="img/icons/telegram.svg"
+            /></a>
+          </li>
+          <li class="contacts__item">
+            <a href="https://github.com/nixory" target="_blank"
+              ><img alt="" src="img/icons/github.svg"
+            /></a>
+          </li>
+          <li class="contacts__item">
+            <a
+              href="https://www.linkedin.com/in/nikita-stepanovs-42683a23b/"
+              target="_blank"
+              ><img alt="" src="img/icons/linkedin.svg"
+            /></a>
+          </li>
+          <li class="contacts__item">
+            <a href="mailto:nikitastepanovs777@gmail.com"
+              ><img alt="" src="img/icons/email.svg"
+            /></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="./js/scripts.min.js"></script>
+  </body>
 </html>
