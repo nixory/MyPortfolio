@@ -7,9 +7,9 @@ const app = express()
 const PORT = 3000
 let user = undefined
 
-app.use('/css', express.static(__dirname + '/build/css'))
-app.use('/js', express.static(__dirname + '/build/js'))
-app.use('/img', express.static(__dirname + '/build/img'))
+app.use('/css', express.static(__dirname + '/css'))
+app.use('/js', express.static(__dirname + '/js'))
+app.use('/img', express.static(__dirname + '/img'))
 app.use(bodyParser.urlencoded({ extended: false }))
 app.post('/index', (req, res) => { 
     if(!req.body.email || !req.body.text) return res.sendStatus(400)   
@@ -30,9 +30,7 @@ app.post('/index', (req, res) => {
     
 })
 app.get('/index', (req, res) => { 
-    if(typeof user !== 'object') return res.sendFile(__dirname + '/build/index.html')   
+    if(typeof user !== 'object') return res.sendFile(__dirname + 'index.html')   
     res.send(`Сообщение успешно отправлено!`) 
     user = undefined  
 })
-
-app.listen(PORT, () => console.log(`server listening at http://localhost:${PORT}/index`))

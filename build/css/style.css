@@ -101,7 +101,6 @@ body.locked {
 
 .btn {
   padding: 12px 20px;
-  color: white;
   background: #10CA00;
   -webkit-box-shadow: 0px 1px 21px 1px rgba(0, 0, 0, 0.24);
           box-shadow: 0px 1px 21px 1px rgba(0, 0, 0, 0.24);
@@ -774,7 +773,7 @@ body.locked {
 }
 
 .contactme {
-  background-image: url("../img/contactmebg.png");
+  background-image: url("../../../img/contactmebg.png");
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
