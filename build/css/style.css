@@ -133,6 +133,39 @@ body.locked {
   color: black;
 }
 
+.language {
+  font-family: Raleway;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: -0.005em;
+  color: #000;
+}
+
+.english {
+  font-family: Raleway;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: -0.005em;
+  color: #002876;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.english:hover {
+  -webkit-filter: brightness(75%);
+          filter: brightness(75%);
+}
+
+#nik {
+  color: #002876;
+}
+
+.btn {
+  color: white;
+}
+
 .header {
   padding-top: 45px;
 }
@@ -200,6 +233,9 @@ body.locked {
 
 .header-nav__item-link:hover {
   text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.26);
+  -webkit-transition: text-shadow 0.1s;
+  -o-transition: text-shadow 0.1s;
+  transition: text-shadow 0.1s;
 }
 
 .header-nav__active {
@@ -241,6 +277,21 @@ body.locked {
   padding-bottom: 70px;
 }
 
+.welcome__btn {
+  -webkit-box-shadow: 0px 1px 21px 1px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 1px 21px 1px rgba(0, 0, 0, 0.1);
+}
+
+.welcome__btn:hover {
+  -webkit-box-shadow: 0px 1px 21px 1px rgba(0, 0, 0, 0.24);
+          box-shadow: 0px 1px 21px 1px rgba(0, 0, 0, 0.24);
+  -webkit-transition: -webkit-box-shadow 0.2s;
+  transition: -webkit-box-shadow 0.2s;
+  -o-transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s, -webkit-box-shadow 0.2s;
+}
+
 .welcome-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -276,6 +327,10 @@ body.locked {
   color: black;
 }
 
+.welcome-text__name span {
+  color: #002876;
+}
+
 .welcome-text__name-o {
   color: #002876;
 }
@@ -286,6 +341,10 @@ body.locked {
   line-height: 38px;
   color: black;
   margin-bottom: 6px;
+}
+
+.welcome-text__who span {
+  color: #002876;
 }
 
 .welcome-text__who-o {
@@ -526,7 +585,7 @@ body.locked {
   bottom: -400px;
   z-index: 200;
   font-family: "Raleway";
-  color: #ffff;
+  color: white;
 }
 
 .portfolio-work1__img {
@@ -709,6 +768,10 @@ body.locked {
   padding-right: 10px;
 }
 
+.aboutme__myphoto {
+  width: 460px;
+}
+
 .contactme {
   background-image: url("../../../img/contactmebg.png");
   background-repeat: no-repeat;
@@ -770,12 +833,22 @@ body.locked {
 
 .contactme__btn {
   background: #002876;
-  -webkit-box-shadow: 0px 0px 21px 9px rgba(0, 40, 118, 0.47);
-          box-shadow: 0px 0px 21px 9px rgba(0, 40, 118, 0.47);
+  -webkit-box-shadow: 0px 0px 21px 9px rgba(0, 40, 118, 0.27);
+          box-shadow: 0px 0px 21px 9px rgba(0, 40, 118, 0.27);
   border-radius: 71px;
   color: #fff;
   padding: 20px 60px;
   margin: 0 auto;
+}
+
+.contactme__btn:hover {
+  -webkit-box-shadow: 0px 0px 21px 9px rgba(0, 40, 118, 0.47);
+          box-shadow: 0px 0px 21px 9px rgba(0, 40, 118, 0.47);
+  -webkit-transition: -webkit-box-shadow 0.2s;
+  transition: -webkit-box-shadow 0.2s;
+  -o-transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s, -webkit-box-shadow 0.2s;
 }
 
 .contacts {
@@ -810,6 +883,11 @@ body.locked {
 .contacts__item {
   padding-right: 25px;
   margin-bottom: 20px;
+}
+
+.contacts__item a img:hover {
+  -webkit-filter: brightness(80%);
+          filter: brightness(80%);
 }
 
 @media (max-width: 1449.98px) {
@@ -955,6 +1033,17 @@ body.locked {
   }
 }
 
+@media only screen and (max-width: 891px) {
+  .header-nav {
+    font-size: 16px;
+    padding-left: 15px;
+  }
+
+  .header-nav__item {
+    margin-right: 10px;
+  }
+}
+
 @media only screen and (max-width: 852px) {
   .portfolio-work1 {
     padding-left: 87px;
@@ -1081,10 +1170,6 @@ body.locked {
         -ms-flex-pack: center;
             justify-content: center;
   }
-
-  .aboutme__myphoto {
-    width: 75%;
-  }
 }
 
 @media only screen and (max-width: 744px) {
@@ -1182,6 +1267,10 @@ body.locked {
 
   .portfolio-prev {
     left: 45px;
+  }
+
+  .aboutme__myphoto {
+    width: 69%;
   }
 }
 
