@@ -101,6 +101,7 @@ body.locked {
 
 .btn {
   padding: 12px 20px;
+  color: white;
   background: #10CA00;
   -webkit-box-shadow: 0px 1px 21px 1px rgba(0, 0, 0, 0.24);
           box-shadow: 0px 1px 21px 1px rgba(0, 0, 0, 0.24);
@@ -142,6 +143,7 @@ body.locked {
   color: #000;
 }
 
+<<<<<<< HEAD
 .english {
   font-family: Raleway;
   font-weight: 500;
@@ -166,6 +168,8 @@ body.locked {
   color: white;
 }
 
+=======
+>>>>>>> 73a1558f797826477d6e6e7820e31e3defd2329e
 .header {
   padding-top: 45px;
 }
@@ -773,7 +777,7 @@ body.locked {
 }
 
 .contactme {
-  background-image: url("../../../img/contactmebg.png");
+  background-image: url("../img/contactmebg.png");
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
