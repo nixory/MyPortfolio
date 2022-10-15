@@ -30,7 +30,7 @@ app.post('/index', (req, res) => {
     
 })
 app.get('/index', (req, res) => { 
-    if(typeof user !== 'object') return res.sendFile(__dirname + '/build/index.html')   
+    if(typeof user !== 'object') return res.sendFile(__dirname + '/index.html')   
     res.send(`Сообщение успешно отправлено!`) 
     user = undefined  
 })

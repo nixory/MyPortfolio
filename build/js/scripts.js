@@ -182,3 +182,8 @@ $("#eng").click(function() {
 }
   
 })
+
+$("#blackmoon").click(function() {
+  
+  $(".main__body").toggleClass("dark-mode");
+});

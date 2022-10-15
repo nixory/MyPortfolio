@@ -166,6 +166,10 @@ body.locked {
   color: white;
 }
 
+.dark-mode {
+  background-color: black;
+}
+
 .header {
   padding-top: 45px;
 }
