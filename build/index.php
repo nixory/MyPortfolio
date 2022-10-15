@@ -1,19 +1,80 @@
+<?php
+
+    // Subscribe my channel if you are using this code
+    // Subscribe my channel if you are using this code
+    // Subscribe my channel if you are using this code
+    // Subscribe my channel if you are using this code
+    // Subscribe my channel if you are using this code
+
+
+    use PHPMailer\PHPMailer\PHPMailer;
+    
+    function sendmail(){
+        
+        $name = "Portfolio";  // Name of your website or yours
+        $to = "nikitastepanovs777@gmail.com";  // mail of reciever
+        $subject = "Message from portfolio";
+        $text = $_GET['text'];
+        $email = $_GET['email'];
+        $body = "
+        <h2>New message</h2>
+        <b>Email:</b> $email<br><br>
+        <b>Message:</b><br>$text
+        ";
+        $from = "knowex228@gmail.com";  // you mail
+        $password = "ptnbdxyykefpyjeg";  // your mail password
+
+        // Ignore from here
+
+        require_once "PHPMailer/PHPMailer.php";
+        require_once "PHPMailer/SMTP.php";
+        require_once "PHPMailer/Exception.php";
+        $mail = new PHPMailer();
+
+        // To Here
+
+        //SMTP Settings
+        $mail->isSMTP();
+        // $mail->SMTPDebug = 3;  Keep It commented this is used for debugging                          
+        $mail->Host = "smtp.gmail.com"; // smtp address of your email
+        $mail->SMTPAuth = true;
+        $mail->Username = $from;
+        $mail->Password = $password;
+        $mail->Port = 587;  // port
+        $mail->SMTPSecure = "tls";  // tls or ssl
+        $mail->smtpConnect([
+        'ssl' => [
+            'verify_peer' => false,
+            'verify_peer_name' => false,
+            'allow_self_signed' => true
+            ]
+        ]);
+
+        //Email Settings
+        $mail->isHTML(true);
+        $mail->setFrom($from, $name);
+        $mail->addAddress($to); // enter email address whom you want to send
+        $mail->Subject = ("$subject");
+        $mail->Body = $body;
+        if ($mail->send()) {
+            header("Location: sent-email.html");
+        } else {
+            echo "Something is wrong: <br><br>" . $mail->ErrorInfo;
+        }
+    }
+
+
+        // sendmail();  // call this function when you want to
+
+        if (isset($_GET['sendmail'])) {
+            sendmail();
+        }
+?>
+
+
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-8W4CWPF1R1"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-8W4CWPF1R1");
-    </script>
     <meta charset="UTF-8" />
     <meta content="IE=edge" http-equiv="X-UA-Compatible" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
@@ -21,7 +82,29 @@
     <meta name="msapplication-navbutton-color" content="white" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="white" />
-    <title>Nixory - portfolio</title>
+    <!-- Primary Meta Tags -->
+    <title>Nixory - Website developer | Разработчик сайтов</title>
+    <meta name="title" content="Nixory - Website developer | Разработчик сайтов">
+    <meta name="description" content="I develop websites, qualitatively and quickly, which can bring the maximum conversion rate to you. Разрабатываю сайты на заказ качественно и быстро, которые смогут вам принести максимум конверсий.">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nixory.xyz/">
+    <meta property="og:title" content="Nixory - Website developer | Разработчик сайтов">
+    <meta property="og:description" content="I develop websites, qualitatively and quickly, which can bring the maximum conversion rate to you. Разрабатываю сайты на заказ качественно и быстро, которые смогут вам принести максимум конверсий.">
+    <meta property="og:image" content="./img/image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://nixory.xyz/">
+    <meta property="twitter:title" content="Nixory - Website developer | Разработчик сайтов">
+    <meta property="twitter:description" content="I develop websites, qualitatively and quickly, which can bring the maximum conversion rate to you. Разрабатываю сайты на заказ качественно и быстро, которые смогут вам принести максимум конверсий.">
+    <meta property="twitter:image" content="./img/image.png">
+    <meta name="robots" content="index, nofollow" />
+    <meta name="yandex" content="noyaca" />
+    <meta name="google" content="all" />
+    <link rel="icon" type="image/png" href="./img/icons/icon.png">
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link href="https://fonts.gstatic.com" rel="preconnect" />
     <link
@@ -32,13 +115,18 @@
       href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
       rel="stylesheet"
     />
-    <link href="build/css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/aos.css">
+    <link
+      href="./css/style.css"
+      rel="stylesheet"
+      media="(prefers-color-scheme: dark),(prefers-color-scheme: no-preference), (prefers-color-scheme: light)"
+    />
   </head>
   <body class="main__body">
     <div class="header">
       <div class="container">
         <div class="header-navbar">
-          <img alt="" id="modalexit" src="build/img/icons/exiticon.png" />
+          <img alt="" id="modalexit" src="img/icons/exiticon.png" />
           <div class="header-logotext" id="logo">
             <div class="header-logo">Nixory</div>
             <div class="header-logo__hidetext" id="hidentext">
@@ -84,22 +172,21 @@
                 ><img
                   alt="instagram"
                   class="header-link__img"
-                  src="build/img/icons/Vectorinstagram.svg" /></a
+                  src="img/icons/Vectorinstagram.svg" /></a
               ><a class="header-link" href="https://github.com/nixory"
                 ><img
                   alt="github"
                   class="header-link__img"
-                  src="build/img/icons/Vectorgithub.svg" /></a
+                  src="img/icons/Vectorgithub.svg" /></a
               ><a class="header-link" href="mailto:nikitastepanovs777@gmail.com"
                 ><img
                   alt="email"
                   class="header-link__img"
-                  src="build/img/icons/Vectoremail.svg"
+                  src="img/icons/Vectoremail.svg"
               /></a>
               <!-- <a href="#" class="language">eng</a> -->
-              <div class="english" id="eng" style="text-decoration: underline">
-                ENG
-              </div>
+              <div class="english" id="eng" style="text-decoration: underline">ENG</div>
+              <!-- <div class="theme"><img src="img/blackmoon.jpg" alt="" style="width: 40%; cursor:pointer;" id="blackmoon"></div> -->
             </div>
           </div>
         </div>
@@ -120,7 +207,7 @@
               Данный сайт создан специально для заказчиков
             </div>
             <form
-              action="https://nixory.github.io/MyPortfolio/#contacts"
+              action="http://localhost:3001/index#contacts"
               method="get"
               style="display: inline; color: white"
             >
@@ -134,12 +221,12 @@
             </form>
           </div>
           <div class="welcome-img">
-            <img alt="" src="build/img/Programming-amico%201.svg" />
+            <img alt="" src="img/Programming-amico%201.svg" />
           </div>
         </div>
       </div>
     </section>
-    <section class="skills">
+    <section class="skills" data-aos="fade-up">
       <div class="container">
         <div class="skills-wrapper">
           <h4 class="skills-title title" id="myskills">Мои умения:</h4>
@@ -163,7 +250,7 @@
         </div>
       </div>
     </section>
-    <section class="howcanihelp" id="howcanihelp">
+    <section class="howcanihelp" id="howcanihelp" data-aos="fade-up">
       <div class="container">
         <div class="wrapper">
           <h4 class="howcanihelp-title title" id="myhelp">Чем я полезен</h4>
@@ -178,7 +265,7 @@
               напишите мне, я постораюсь вам помочь!
             </div>
             <div class="howcanihelp-img">
-              <img alt="" src="build/img/Code%20typing-bro%201.svg" />
+              <img alt="" src="img/Code%20typing-bro%201.svg" />
             </div>
           </div>
         </div>
@@ -195,7 +282,7 @@
                 <img
                   alt=""
                   class="portfolio-img"
-                  src="build/img/Rectangle%201firstwoprk.png"
+                  src="img/Rectangle%201firstwoprk.webp"
                 />
                 <button class="portfolio-btn portfolio-btn__1 btn" id="btn2">
                   Подробнее
@@ -206,7 +293,7 @@
                 <img
                   alt=""
                   class="portfolio-img"
-                  src="build/img/Rectangle%202secondwork.png"
+                  src="img/Rectangle%202secondwork.webp"
                 />
                 <button class="portfolio-btn portfolio-btn__2 btn" id="btn4">
                   Подробнее
@@ -221,7 +308,7 @@
                 <img
                   alt=""
                   class="portfolio-img"
-                  src="build/img/Rectangle%201firstwoprk.png"
+                  src="img/Rectangle%201firstwoprk.webp"
                 />
                 <button class="portfolio-btn portfolio-btn__1 btn" id="btn3">
                   Подробнее
@@ -232,7 +319,7 @@
                 <img
                   alt=""
                   class="portfolio-img"
-                  src="build/img/Rectangle%202secondwork.png"
+                  src="img/Rectangle%202secondwork.webp"
                 />
                 <button class="portfolio-btn portfolio-btn__2 btn" id="btn5">
                   Подробнее
@@ -244,14 +331,14 @@
           <div class="portfolio-prev"></div>
           <div class="swiper-pagination"></div>
         </div>
-        <div class="portfolio-work1" id="work1">
-          <img alt="" id="exit" src="build/img/icons/mdi_exit-to-app.svg" />
+        <div class="portfolio-work1" id="work1" data-aos="zoom-in">
+          <img alt="" id="exit" src="img/icons/mdi_exit-to-app.svg" />
           <div class="portfolio-work1__wrapper">
             <div class="portfolio-work1__desc">
               <img
                 alt=""
                 class="portfolio-work1__img"
-                src="build/img/Rectangle%202firstwork.png"
+                src="img/Rectangle%202firstwork.webp"
               />
               <span class="portfolio-work1__hours" id="hours"
                 >Делал сайт +- 48 часов</span
@@ -267,7 +354,7 @@
                 </button>
               </form>
             </div>
-            <div class="portfolio-work1__text">
+            <div class="portfolio-work1__text" >
               <div class="portfolio-work1__title" id="title1">
                 Разработка сайта по логистике из Китая “Globalopt”
               </div>
@@ -301,13 +388,13 @@
           </div>
         </div>
         <div class="portfolio-work1 portfolio-work2" id="work2">
-          <img alt="" id="exit2" src="build/img/icons/mdi_exit-to-app.svg" />
+          <img alt="" id="exit2" src="img/icons/mdi_exit-to-app.svg" />
           <div class="portfolio-work1__wrapper">
             <div class="portfolio-work1__desc">
               <img
                 alt=""
                 class="portfolio-work1__img"
-                src="build/img/Rectangle%2022firstwoprk.png"
+                src="img/Rectangle%2022firstwoprk.webp"
               />
               <span class="portfolio-work1__hours" id="hours2"
                 >Делал сайт +- 32 часа</span
@@ -356,7 +443,7 @@
         </div>
       </div>
     </section>
-    <section class="aboutme" id="aboutme">
+    <section class="aboutme" id="aboutme" data-aos="fade-up">
       <div class="container">
         <h4 class="aboutme__title title" id="boutme">Обо мне</h4>
         <div class="aboutme__wrapper">
@@ -402,18 +489,21 @@
             </div>
           </div>
           <div class="aboutme__photo">
-            <img alt="" class="aboutme__myphoto" src="build/img/myphoto.jpg" />
+            <img alt="" class="aboutme__myphoto" src="img/myphoto.webp" />
           </div>
         </div>
       </div>
     </section>
-    <div class="contactme">
+    <div class="contactme" >
       <div class="contactme-blur">
         <div class="container">
-          <div class="contactme__title title" id="contact">Связаться со мной</div>
+          <div class="contactme__title title" id="contact">
+            Связаться со мной
+          </div>
           <form
+            method="get"
+            id="form"
             class="contactme__forms"
-            method="post"
           >
             <input
               class="contactme__input"
@@ -429,45 +519,52 @@
               required=""
               type="text"
             />
-            <button class="contactme__btn btn" id="submit">Отправить</button>
+            <button
+              class="contactme__btn btn"
+              id="submit"
+              type="submit" name="sendmail"
+             
+            >
+              Отправить
+            </button>
           </form>
         </div>
       </div>
     </div>
-    <div class="contacts" id="contacts">
+    <div class="contacts" id="contacts" >
       <div class="container">
         <div class="contacts__title title" id="myContacts">Контакты</div>
         <ul class="contacts__icons">
           <li class="contacts__item">
             <a href="https://www.instagram.com/eternalxxsleep/" target="_blank"
-              ><img alt="" src="build/img/icons/instagram.svg"
+              ><img alt="" src="img/icons/instagram.svg"
             /></a>
           </li>
           <li class="contacts__item">
             <a href="https://vk.com/eternalxsleep" target="_blank"
-              ><img alt="" src="build/img/icons/vk.svg"
+              ><img alt="" src="img/icons/vk.svg"
             /></a>
           </li>
           <li class="contacts__item">
             <a href="https://t.me/w8plzz" target="_blank"
-              ><img alt="" src="build/img/icons/telegram.svg"
+              ><img alt="" src="img/icons/telegram.svg"
             /></a>
           </li>
           <li class="contacts__item">
             <a href="https://github.com/nixory" target="_blank"
-              ><img alt="" src="build/img/icons/github.svg"
+              ><img alt="" src="img/icons/github.svg"
             /></a>
           </li>
           <li class="contacts__item">
             <a
               href="https://www.linkedin.com/in/nikita-stepanovs-42683a23b/"
               target="_blank"
-              ><img alt="" src="build/img/icons/linkedin.svg"
+              ><img alt="" src="img/icons/linkedin.svg"
             /></a>
           </li>
           <li class="contacts__item">
             <a href="mailto:nikitastepanovs777@gmail.com"
-              ><img alt="" src="build/img/icons/email.svg"
+              ><img alt="" src="img/icons/email.svg"
             /></a>
           </li>
         </ul>
@@ -475,7 +572,7 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-    <!-- <script type="module" src="nodemailer.js"></script> -->
-    <script src="build/js/scripts.min.js"></script>
+    <script src="./js/aos.js"></script>
+    <script src="./js/scripts.js"></script>
   </body>
 </html>

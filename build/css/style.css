@@ -777,7 +777,7 @@ body.locked {
 }
 
 .contactme {
-  background-image: url("./img/contactmebg.png");
+  background-image: url("../img/contactmebg.webp");
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
