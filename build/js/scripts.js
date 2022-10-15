@@ -121,10 +121,10 @@ $("#eng").click(function() {
     document.getElementById("myExp").innerHTML = "In the field of web programming for a year, at most did their own training projects.";
     document.getElementById("country").innerHTML = "Country of residence:";
     document.getElementById("myCountry").innerHTML = "Latvia, Riga.";
-    document.getElementById("contact").innerHTML = "Contact with me";
-    document.querySelector(".contactme__input").placeholder = "Your Email:";
-    document.querySelector(".contactme__input-o").placeholder = "Your Message:";
-    document.getElementById("submit").innerHTML = "Sumbit";
+    // document.getElementById("contact").innerHTML = "Contact with me";
+    // document.querySelector(".contactme__input").placeholder = "Your Email:";
+    // document.querySelector(".contactme__input-o").placeholder = "Your Message:";
+    // document.getElementById("submit").innerHTML = "Sumbit";
     document.getElementById("myContacts").innerHTML = "Contacts";
     document.getElementById("hidentext").innerHTML = "Click on the logo to open the menu";
   }
@@ -173,44 +173,44 @@ $("#eng").click(function() {
     document.getElementById("myExp").innerHTML = "В сфере веб программирования уже год, максимум делал свои учебные проекты.";
     document.getElementById("country").innerHTML = "Страна проживания:";
     document.getElementById("myCountry").innerHTML = "Латвия, Рига.";
-    document.getElementById("contact").innerHTML = "Связаться со мной";
-    document.querySelector(".contactme__input").placeholder = "Ваш Email:";
-    document.querySelector(".contactme__input-o").placeholder = "Ваше сообщение:";
-    document.getElementById("submit").innerHTML = "Отправить";
+    // document.getElementById("contact").innerHTML = "Связаться со мной";
+    // document.querySelector(".contactme__input").placeholder = "Ваш Email:";
+    // document.querySelector(".contactme__input-o").placeholder = "Ваше сообщение:";
+    // document.getElementById("submit").innerHTML = "Отправить";
     document.getElementById("myContacts").innerHTML = "Контакты";
     document.getElementById("hidentext").innerHTML = "Кликни на лого, чтобы открыть меню";
 }
   
 })
 
-$("#blackmoon").click(function() {
+// $("#blackmoon").click(function() {
   
-  $(".main__body").toggleClass("dark-mode");
-});
+//   $(".main__body").toggleClass("dark-mode");
+// });
 
 
-function send(event, php){
-  console.log("Отправка запроса");
-  event.preventDefault ? event.preventDefault() : event.returnValue = false;
-  var req = new XMLHttpRequest();
-  req.open('POST', php, true);
-  req.onload = function() {
-    if (req.status >= 200 && req.status < 400) {
-    json = JSON.parse(this.response); // Ебанный internet explorer 11
-        console.log(json);
+// function send(event, php){
+//   console.log("Отправка запроса");
+//   event.preventDefault ? event.preventDefault() : event.returnValue = false;
+//   var req = new XMLHttpRequest();
+//   req.open('POST', php, true);
+//   req.onload = function() {
+//     if (req.status >= 200 && req.status < 400) {
+//     json = JSON.parse(this.response); // Ебанный internet explorer 11
+//         console.log(json);
           
-        // ЗДЕСЬ УКАЗЫВАЕМ ДЕЙСТВИЯ В СЛУЧАЕ УСПЕХА ИЛИ НЕУДАЧИ
-        if (json.result == "success") {
-          // Если сообщение отправлено
-          alert("Сообщение отправлено");
-        } else {
-          // Если произошла ошибка
-          alert("Ошибка. Сообщение не отправлено");
-        }
-      // Если не удалось связаться с php файлом
-      } else {alert("Ошибка сервера. Номер: "+req.status);}}; 
+//         // ЗДЕСЬ УКАЗЫВАЕМ ДЕЙСТВИЯ В СЛУЧАЕ УСПЕХА ИЛИ НЕУДАЧИ
+//         if (json.result == "success") {
+//           // Если сообщение отправлено
+//           alert("Сообщение отправлено");
+//         } else {
+//           // Если произошла ошибка
+//           alert("Ошибка. Сообщение не отправлено");
+//         }
+//       // Если не удалось связаться с php файлом
+//       } else {alert("Ошибка сервера. Номер: "+req.status);}}; 
   
-  // Если не удалось отправить запрос. Стоит блок на хостинге
-  req.onerror = function() {alert("Ошибка отправки запроса");};
-  req.send(new FormData(event.target));
-  }
+//   // Если не удалось отправить запрос. Стоит блок на хостинге
+//   req.onerror = function() {alert("Ошибка отправки запроса");};
+//   req.send(new FormData(event.target));
+//   }
