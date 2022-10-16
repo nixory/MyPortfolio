@@ -75,7 +75,16 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8W4CWPF1R1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8W4CWPF1R1');
+</script>
     <meta charset="UTF-8" />
+    
     <meta content="IE=edge" http-equiv="X-UA-Compatible" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta name="theme-color" content="white" />
@@ -207,7 +216,7 @@
               Данный сайт создан специально для заказчиков
             </div>
             <form
-              action="http://localhost:3001/index#contacts"
+              action="https://nixory.xyz/#contacts"
               method="get"
               style="display: inline; color: white"
             >
